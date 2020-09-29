@@ -1,0 +1,29 @@
+.upload-outer-card{
+    width: 60%;
+    margin-left: 20%;
+   
+    padding: 2%;
+}
+.update-input  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 2;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;	
+  }
+ 
+  .update-button{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .update-button:hover{
+      background-color: green;
+  }

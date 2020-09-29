@@ -1,0 +1,17 @@
+.home-outer-card{
+    /* align-items: center; */
+    text-align: center;
+    border-style: solid;
+    width: 50%;
+    margin-left: 25%;    
+    background-image: linear-gradient(#ffaf6e,#faee45);
+    box-shadow: 5px 5px 5px rgb(131, 131, 131);
+}
+.home-item-card{
+    width: 96%;  
+    margin: 2%;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 0.05cm;
+    background-color: whitesmoke;
+}
