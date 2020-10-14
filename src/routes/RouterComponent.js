@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Homepage from '../components/Homepage'
-import Login from '../components/Login'
-import MyOrder from '../components/MyOrder'
-import UploadMaterial from '../components/UploadMaterial'
+import AdminHome from '../components/admin/AdminHome'
+import Comment from '../components/demo_akhilesh/Comment'
+import Homepage from '../components/home/Homepage'
+import Login from '../components/login_signup/Login'
+import Logout from '../components/login_signup/Logout'
+import SignUp from '../components/login_signup/SignUp'
+import MyOrder from '../components/orders/MyOrder'
+import UploadMaterial from '../components/upload/UploadMaterial'
+
 import Landingpage from '../landing/Landingpage'
 
 export class RouterComponent extends Component {
@@ -13,9 +18,13 @@ export class RouterComponent extends Component {
                 <Switch>
                     <Route exact path="/" component={Landingpage}/>
                     <Route exact path="/login" component={Login}/>
+                    <Route exact path="/signup" component={SignUp}/>
                     <Route exact path="/home" component={Homepage}/>
+                    <Route exact path="/admin" component={AdminHome}/>
                     <Route exact path="/upload/material" component={UploadMaterial}/>
-                    <Route exact path="/mycart/:name/:description/:price/:imgUrl" component={MyOrder}/>
+                    <Route exact path="/logout" component={Logout}/>
+                    <Route exact path="/mycart" component={MyOrder}/>
+                    <Route exact path="/comment" component={Comment}/>
                 </Switch>
             </div>
         )

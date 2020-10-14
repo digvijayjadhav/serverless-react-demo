@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Card } from 'react-bootstrap'
-import { db, storageRef } from '../firebase/firebase'
-import NavBar from './navbar/NavBar'
+import { db, storageRef } from '../../firebase/firebase'
+import NavBar from '../navbar/NavBar'
 import './UploadMaterial.css'
 export class UploadMaterial extends Component {
 

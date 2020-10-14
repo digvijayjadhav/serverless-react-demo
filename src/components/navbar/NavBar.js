@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap'
-
+import {CgShoppingCart} from 'react-icons/cg'
+import {FaUserCircle} from 'react-icons/fa'
 export class NavBar extends Component {
     render() {
         return (
@@ -13,17 +14,13 @@ export class NavBar extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link href="/home" style={{color:'#fff'}}>Home</Nav.Link>
                             <Nav.Link href="/upload/material" style={{color:'#fff'}}>Upload</Nav.Link>
-                            <NavDropdown title="Dropdown" id="basic-nav-dropdown" style={{color:'#fff'}}>
-                                <NavDropdown.Item href="#action/3.1" style={{color:'#fff'}}>Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2" style={{color:'#fff'}}>Another action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3" style={{color:'#fff'}}>Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4" style={{color:'#fff'}}>Separated link</NavDropdown.Item>
-                            </NavDropdown>
+                            <Nav.Link href="/logout" style={{color:'#fff'}}>Logout</Nav.Link>
+                            
                         </Nav>
                         <Form inline>
-                            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                            <Button variant="outline-success">Search</Button>
+                            
+                            <CgShoppingCart  style={{height:'30px',width:'30px',color:'#fff'}}/><span className="badge badge-warning"></span>
+                            <FaUserCircle style={{marginLeft:'17px', height:'30px',width:'30px',color:'#fff'}}/>
                         </Form>
                     </Navbar.Collapse>
                 </Navbar>
