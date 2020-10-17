@@ -8,11 +8,15 @@ export class AdminHome extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            orders: [],
             order_detail: [],
-            id:[],
+            items_details:[],
+            items_:[],
             user_:[],
-            items_:[]
+            user_details:[],
+            timestamp:[],
+            cost:[],
+            orders:[],
+            id:[]
         }
     }
     componentDidMount() {
@@ -71,7 +75,7 @@ export class AdminHome extends Component {
                     })
 
                 })
-                console.log(this.state.order_detail[0]['item_details'])
+                console.log(this.state.order_detail)
                 
                
             })
@@ -79,45 +83,53 @@ export class AdminHome extends Component {
                 console.log('admin home error', err);
             })
     }
+    /* async componentDidMount() {
+        var res_ = [], userName = []
+        await db.collection('orders').get()
+            .then(res => {
+                res.forEach(element => {
+                    
+
+
+                    res_.push(element.data())
+                })
+                var order_=[]
+                this.setState({ orders: res_ })
+                console.log('Response in admin ', this.state.orders);
+                this.state.orders.forEach((element, index) => {
+                    element['items'].forEach((a,b)=>{
+                        db.collection('store').doc(a).get()
+                         .then(res=>{
+                             order_.push(res.data())
+                         })
+                         .catch(err=>{
+                             console.log(err);
+                         })
+                    })
+                })
+                console.log('--',order_);
+
+            })
+            .catch(err => {
+                console.log('Error in Admin ', err);
+            })
+    } */
     render() {
         return (
             <div>
                 <NavBar />
                 <Card>
                     <h2>Admin Home</h2>
-                    {this.state.order_detail.map((e, index) => {
+                    {this.state.order_detail.map((element, index) => {
                         return (
-                            <Card key={index}>
-                                
-                                <p>{e['timestamp']}</p>
-                                <p>{e['cost']}</p>
-                                {e['items_details'].map((element,index) => {
-                                    return(
-                                        <div>
-                                            {element}
-                                        </div>
-                                    )
-                                })}
-                                
-                                {/* {e['items_details'].map((element,index) => {
-                                    return (
-                                        <div>
-                                            <p>{element[]['itemName']}</p>
-                                             <p>{element['itemPrice']}</p>
-                                             <p>{element['itemDescription']}</p> 
-                                        </div>
-                                    )
-                                })} */}
-                                <div>{['user_details'].map(element=>{
-                                    return(
-                                    <div>
-                                        <p>{element['fullName']}</p>
-                                        </div>
-                                    )
-                                })}</div>
-                            </Card>
+                            <div key={index}>
+                                {element['userId']}
+                            </div>
                         )
                     })}
+
+
+
                 </Card>
             </div>
         )

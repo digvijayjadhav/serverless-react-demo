@@ -1,3 +1,10 @@
+/*
+For every routing of urls , this file is responsible,From here every routing takes place.
+Inside switch we have given multiple routes .
+@author: Digvijay Jadhav
+@date: 4 Oct 2020
+*/
+
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import AdminHome from '../components/admin/AdminHome'
